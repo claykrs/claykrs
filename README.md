@@ -38,15 +38,11 @@
 
 <table align="center">
 <tr>
-<td width="33%" valign="top" align="center">
-<a href="https://github.com/claykrs/roblox-headless"><b>roblox-headless</b></a><br>
-<sub>Run a Roblox game's server and client scripts in the terminal, for tests and CI</sub>
-</td>
-<td width="33%" valign="top" align="center">
+<td width="50%" valign="top" align="center">
 <a href="https://github.com/claykrs/roblox-redteam"><b>roblox-redteam</b></a><br>
 <sub>Attacks your game's remotes the way exploiters do and reports what breaks</sub>
 </td>
-<td width="33%" valign="top" align="center">
+<td width="50%" valign="top" align="center">
 <a href="https://github.com/claykrs/luau-llm"><b>luau-llm</b></a><br>
 <sub>A language model running inside a Roblox server, in pure Luau</sub>
 </td>
