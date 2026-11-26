@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=2800&pause=900&color=FF8C00&center=true&vCenter=true&width=520&height=60&lines=hi%2C+i'm+clay;roblox+developer;security+%2B+hardware;building+with+ai" alt="hi, i'm clay" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=2800&pause=900&color=FF8C00&center=true&vCenter=true&width=520&height=60&lines=hi%2C+i'm+clay" alt="hi, i'm clay" />
 </p>
 
 <p align="center">
