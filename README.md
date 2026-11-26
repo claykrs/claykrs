@@ -44,7 +44,7 @@
 <td width="50%" valign="top" align="center">
 <a href="https://github.com/claykrs/Windows-3.x-VDM"><b>Windows-3.x-VDM</b></a><br>
 <sub>Windows 3.0 running inside Roblox</sub><br><br>
-<a href="https://github.com/claykrs/Windows-3.x-VDM"><img src="https://raw.githubusercontent.com/claykrs/Windows-3.x-VDM/main/docs/screenshots/r5-progman-groups.jpg" alt="Windows 3.0 inside Roblox" /></a>
+<a href="https://github.com/claykrs/Windows-3.x-VDM"><img src="https://raw.githubusercontent.com/claykrs/Windows-3.x-VDM/main/docs/images/hero.png" alt="Windows 3.0 inside Roblox" /></a>
 </td>
 </tr>
 </table>
