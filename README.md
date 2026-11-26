@@ -36,20 +36,6 @@
 
 <br>
 
-<table align="center">
-<tr>
-<td width="50%" valign="top" align="center">
-<a href="https://github.com/claykrs/roblox-redteam"><b>roblox-redteam</b></a><br>
-<sub>Attacks your game's remotes the way exploiters do and reports what breaks</sub>
-</td>
-<td width="50%" valign="top" align="center">
-<a href="https://github.com/claykrs/luau-llm"><b>luau-llm</b></a><br>
-<sub>A language model running inside a Roblox server, in pure Luau</sub>
-</td>
-</tr>
-</table>
-
-<br>
 
 <p align="center">
   <img height="150" src="https://github-readme-stats.vercel.app/api?username=claykrs&show_icons=true&hide_border=true&include_all_commits=true&hide_rank=true&bg_color=0d1117&title_color=FF8C00&icon_color=c9d1d9&text_color=c9d1d9" />
