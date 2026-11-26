@@ -12,7 +12,6 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Roblox_Studio-00A2FF?style=flat-square&logo=robloxstudio&logoColor=white" />
   <img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=claude&logoColor=white" />
   <img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" />
   <img src="https://img.shields.io/badge/Z.ai-2D2D2D?style=flat-square&logo=zdotai&logoColor=white" />
@@ -28,8 +27,8 @@
 <sub>Windows 98 running inside Roblox</sub>
 </td>
 <td width="50%" valign="top" align="center">
-<a href="https://github.com/claykrs/Windows-3.x-VDM"><img src="https://raw.githubusercontent.com/claykrs/Windows-3.x-VDM/main/docs/images/hero.png" alt="Windows 3.0 inside Roblox" /></a><br><br>
-<a href="https://github.com/claykrs/Windows-3.x-VDM"><b>Windows-3.x-VDM</b></a><br>
+<a href="https://github.com/claykrs/roblox-win3-emulator"><img src="https://raw.githubusercontent.com/claykrs/roblox-win3-emulator/main/docs/images/hero.png" alt="Windows 3.0 inside Roblox" /></a><br><br>
+<a href="https://github.com/claykrs/roblox-win3-emulator"><b>roblox-win3-emulator</b></a><br>
 <sub>Windows 3.0 running inside Roblox</sub>
 </td>
 </tr>
