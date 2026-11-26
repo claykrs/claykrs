@@ -23,9 +23,9 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/claykrs/RVPC"><b>RVPC</b></a><br>
+<a href="https://github.com/claykrs/roblox-win98-emulator"><b>roblox-win98-emulator</b></a><br>
 Windows 98 running inside Roblox<br><br>
-<a href="https://github.com/claykrs/RVPC"><img src="https://raw.githubusercontent.com/claykrs/RVPC/master/docs/images/hero.png" alt="Windows 98 Setup inside Roblox" /></a>
+<a href="https://github.com/claykrs/roblox-win98-emulator"><img src="https://raw.githubusercontent.com/claykrs/roblox-win98-emulator/master/docs/images/hero.png" alt="Windows 98 Setup inside Roblox" /></a>
 </td>
 <td width="50%" valign="top">
 <a href="https://github.com/claykrs/Windows-3.x-VDM"><b>Windows 3.x VDM</b></a><br>
