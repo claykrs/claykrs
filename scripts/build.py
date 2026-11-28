@@ -1,7 +1,6 @@
 """Draws the profile's pictures into assets/:
 
   header-{dark,light}.svg  the squid, "clay" in a pixel font, and a quote
-  graph-{dark,light}.svg   the contribution graph, eaten by a squid swimming across
   stats-{dark,light}.svg   stars, contributions, PRs and top languages
 
 Run by .github/workflows/profile.yml every day. Locally: python scripts/build.py
@@ -112,59 +111,6 @@ def fetch():
         data = json.loads(subprocess.run(["gh", "api", "graphql", "-f", f"query={QUERY}"], capture_output=True, check=True).stdout)
     return data["data"]["user"]
 
-# ---- the graph, eaten ----
-
-LEVEL = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2, "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
-
-
-def graph(theme, user):
-    t = THEMES[theme]
-    weeks = user["contributionsCollection"]["contributionCalendar"]["weeks"]
-    cell, gap, top, left = 11, 3, 10, 8
-    n = len(weeks)
-    width = left * 2 + n * (cell + gap)
-    height = top * 2 + 7 * (cell + gap)
-    period = 16.0  # seconds for one swim across and back to a full graph
-    swim = 0.7  # share of the period spent swimming
-    cells = []
-    for w, week in enumerate(weeks):
-        for day in week["contributionDays"]:
-            level = LEVEL.get(day["contributionLevel"], 0)
-            y = top + _weekday(day["date"]) * (cell + gap)
-            x = left + w * (cell + gap)
-            fill = t["levels"][level]
-            if level:
-                cells.append(f'<rect class="c c{w}" x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{fill}"/>')
-            else:
-                cells.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{fill}"/>')
-    # each column fades to empty as the squid passes it, then everything grows back
-    css = [f".c{{animation:eat {period}s linear infinite}}",
-           f"@keyframes eat{{0%{{opacity:1}}4%{{opacity:0}}{int((1 - 0.08) * 100)}%{{opacity:0}}100%{{opacity:1}}}}"]
-    for w in range(n):
-        delay = swim * period * (w + 0.5) / n
-        css.append(f".c{w}{{animation-delay:{delay:.2f}s}}")
-    s = 2
-    sw, sh = len(SQUID[0]) * s, len(SQUID) * s
-    sy = top + (7 * (cell + gap) - sh) // 2
-    end = width + sw
-    css.append(f".sq{{animation:swim {period}s linear infinite}}"
-               f"@keyframes swim{{0%{{transform:translateX({-sw}px)}}{int(swim * 100)}%{{transform:translateX({end}px)}}100%{{transform:translateX({end}px)}}}}")
-    css.append(BLINK)
-    css.append("@media (prefers-reduced-motion:reduce){.c,.sq,.lid{animation:none}.sq{display:none}}")
-    total = user["contributionsCollection"]["contributionCalendar"]["totalContributions"]
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
-<title>{total} contributions in the last year, eaten by a squid</title>
-<style>{"".join(css)}</style>
-{"".join(cells)}
-<g class="sq" shape-rendering="crispEdges"><g transform="translate(0 {sy})">{squid_rects(0, 0, s)}</g></g>
-</svg>
-'''
-
-
-def _weekday(date):
-    import datetime
-    return (datetime.date.fromisoformat(date).weekday() + 1) % 7  # Sunday first, like GitHub
-
 # ---- stats ----
 
 
@@ -181,15 +127,15 @@ def stats(theme, user):
     every = sum(v[0] for v in langs.values()) or 1
     top = [kv for kv in sorted(langs.items(), key=lambda kv: -kv[1][0])[:5] if kv[1][0] / every >= 0.01]
     total = sum(v[0] for _, v in top) or 1
-    items = [("contributions this year", cc["contributionCalendar"]["totalContributions"]),
+    items = [("contributions", cc["contributionCalendar"]["totalContributions"]),
              ("commits", cc["totalCommitContributions"]),
              ("pull requests", user["pullRequests"]["totalCount"]),
              ("stars", stars)]
     w = 840
-    col = (w - 40) // len(items)
+    col = w / len(items)
     nums = "".join(
-        f'<text x="{20 + i * col}" y="44" font-size="26" font-weight="700" fill="#FF9A1A" {FONT}>{v}</text>'
-        f'<text x="{20 + i * col}" y="66" font-size="13" fill="{t["muted"]}" {FONT}>{label}</text>'
+        f'<text x="{col * (i + 0.5):.0f}" y="46" text-anchor="middle" font-size="28" font-weight="700" fill="#FF9A1A" {FONT}>{v}</text>'
+        f'<text x="{col * (i + 0.5):.0f}" y="70" text-anchor="middle" font-size="13" fill="{t["muted"]}" {FONT}>{label}</text>'
         for i, (label, v) in enumerate(items))
     bar, x = [], 20
     span = w - 40
@@ -216,7 +162,6 @@ def main():
     user = fetch()
     for theme in THEMES:
         (ASSETS / f"header-{theme}.svg").write_text(header(theme), encoding="utf8")
-        (ASSETS / f"graph-{theme}.svg").write_text(graph(theme, user), encoding="utf8")
         (ASSETS / f"stats-{theme}.svg").write_text(stats(theme, user), encoding="utf8")
 
 

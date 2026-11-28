@@ -17,14 +17,18 @@
   <img src="https://img.shields.io/badge/Z.ai-2D2D2D?style=flat-square&logo=zdotai&logoColor=white" />
 </p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/graph-dark.svg">
-  <img src="assets/graph-light.svg" alt="My contribution graph for the last year, with the pixel squid swimming across and eating it" width="100%">
-</picture>
-
 ### Projects
 
 <table>
+<tr>
+<td colspan="2" valign="top">
+<a href="https://github.com/claykrs/multi-clawd"><img src="https://raw.githubusercontent.com/claykrs/multi-clawd/main/docs/banner.svg" alt="multi-clawd: one Claude leads, the rest work as its crew"></a>
+<br><br>
+<a href="https://github.com/claykrs/multi-clawd"><b>multi-clawd</b></a>
+<br>
+<sub>One Claude Code chat leads a crew of agents working in parallel. Plus several Claude accounts side by side.</sub>
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/claykrs/roblox-win98-emulator"><img src="https://raw.githubusercontent.com/claykrs/roblox-win98-emulator/master/docs/images/start-menu.png" alt="Windows 98 desktop with the Start menu open, running inside Roblox Studio"></a>
@@ -39,15 +43,6 @@
 <a href="https://github.com/claykrs/roblox-win3-emulator"><b>roblox-win3-emulator</b></a>
 <br>
 <sub>An 8086/286 PC in pure Luau that boots the real Windows 3.0 to Program Manager. Complete.</sub>
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-<a href="https://github.com/claykrs/multi-clawd"><img src="https://raw.githubusercontent.com/claykrs/multi-clawd/main/docs/banner.svg" alt="multi-clawd: one Claude leads, the rest work as its crew"></a>
-<br><br>
-<a href="https://github.com/claykrs/multi-clawd"><b>multi-clawd</b></a>
-<br>
-<sub>One Claude Code chat leads a crew of agents working in parallel. Plus several Claude accounts side by side.</sub>
 </td>
 </tr>
 </table>
