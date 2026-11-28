@@ -32,6 +32,13 @@
 <sub>Windows 3.0 running inside Roblox</sub>
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top" align="center">
+<a href="https://github.com/claykrs/multi-clawd"><img src="https://raw.githubusercontent.com/claykrs/multi-clawd/main/docs/banner.svg" alt="multi-clawd" /></a><br><br>
+<a href="https://github.com/claykrs/multi-clawd"><b>multi-clawd</b></a><br>
+<sub>Several Claude accounts side by side, and one Claude Code chat leading a crew of agents</sub>
+</td>
+</tr>
 </table>
 
 <br>
