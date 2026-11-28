@@ -134,24 +134,25 @@ def stats(theme, user):
     w = 840
     col = w / len(items)
     nums = "".join(
-        f'<text x="{col * (i + 0.5):.0f}" y="46" text-anchor="middle" font-size="28" font-weight="700" fill="#FF9A1A" {FONT}>{v}</text>'
-        f'<text x="{col * (i + 0.5):.0f}" y="70" text-anchor="middle" font-size="13" fill="{t["muted"]}" {FONT}>{label}</text>'
+        f'<text x="{col * (i + 0.5):.0f}" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#FF9A1A" {FONT}>{v}</text>'
+        f'<text x="{col * (i + 0.5):.0f}" y="72" text-anchor="middle" font-size="14" fill="{t["muted"]}" {FONT}>{label}</text>'
         for i, (label, v) in enumerate(items))
+    nums += "".join(f'<line x1="{col * i:.0f}" y1="22" x2="{col * i:.0f}" y2="76" stroke="{t["line"]}"/>' for i in range(1, len(items)))
     bar, x = [], 20
     span = w - 40
     for name, (size, color) in top:
         bw = span * size / total
-        bar.append(f'<rect x="{x:.1f}" y="92" width="{max(bw - 2, 1):.1f}" height="8" rx="2" fill="{color}"/>')
+        bar.append(f'<rect x="{x:.1f}" y="100" width="{max(bw - 2, 1):.1f}" height="8" rx="2" fill="{color}"/>')
         x += bw
     legend, lx = [], 20
     for name, (size, color) in top:
         label = f"{name} {100 * size / total:.0f}%"
-        legend.append(f'<rect x="{lx}" y="114" width="9" height="9" rx="2" fill="{color}"/>'
-                      f'<text x="{lx + 14}" y="123" font-size="12" fill="{t["text"]}" {FONT}>{label}</text>')
+        legend.append(f'<rect x="{lx}" y="120" width="9" height="9" rx="2" fill="{color}"/>'
+                      f'<text x="{lx + 14}" y="129" font-size="12" fill="{t["text"]}" {FONT}>{label}</text>')
         lx += 14 + len(label) * 7.6 + 22
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="140" viewBox="0 0 {w} 140">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="150" viewBox="0 0 {w} 150">
 <title>GitHub stats for {USER}</title>
-<rect x="0.5" y="0.5" width="{w - 1}" height="139" rx="8" fill="none" stroke="{t["line"]}"/>
+<rect x="0.5" y="0.5" width="{w - 1}" height="149" rx="8" fill="none" stroke="{t["line"]}"/>
 {nums}{"".join(bar)}{"".join(legend)}
 </svg>
 '''
