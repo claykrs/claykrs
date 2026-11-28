@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" alt="A pixel orange squid next to the name clay: Roblox, Luau, and tools for working with Claude." width="840">
+  <img src="assets/header-light.svg" alt="A pixel orange squid next to the name clay: Talk is cheap. Show me the code. (Linus Torvalds)" width="840">
 </picture>
 
 <p align="center">
@@ -45,18 +45,4 @@
 <sub>One Claude Code chat leads a crew of agents working in parallel. Plus several Claude accounts side by side.</sub>
 </td>
 </tr>
-</table>
-
-### Contributing to
-
-<table>
-<tr><td><a href="https://github.com/luau-lang/luau">luau</a></td><td><sub><a href="https://github.com/luau-lang/luau/pull/3161">New solver: select past the last argument selects no values</a> · <a href="https://github.com/luau-lang/luau/pull/3160">refuse to compile the VM with fast-math</a></sub></td></tr>
-<tr><td><a href="https://github.com/roblox-ts/roblox-ts">roblox-ts</a></td><td><sub><a href="https://github.com/roblox-ts/roblox-ts/pull/3129">Wrap LuaTuples returned by JSX factories</a></sub></td></tr>
-<tr><td><a href="https://github.com/rojo-rbx/rojo">rojo</a></td><td><sub><a href="https://github.com/rojo-rbx/rojo/pull/1374">Warn about unknown keys in meta files</a></sub></td></tr>
-<tr><td><a href="https://github.com/lune-org/lune">lune</a></td><td><sub><a href="https://github.com/lune-org/lune/pull/430">Send the port in the Host header</a></sub></td></tr>
-<tr><td><a href="https://github.com/JohnnyMorganz/luau-lsp">luau-lsp</a></td><td><sub><a href="https://github.com/JohnnyMorganz/luau-lsp/pull/1695">Warn when a string require differs in case from the file on disk</a></sub></td></tr>
-<tr><td><a href="https://github.com/JohnnyMorganz/StyLua">StyLua</a></td><td><sub><a href="https://github.com/JohnnyMorganz/StyLua/pull/1194">Idempotent formatting for a one-line table argument</a></sub></td></tr>
-<tr><td><a href="https://github.com/Kampfkarren/selene">selene</a></td><td><sub><a href="https://github.com/Kampfkarren/selene/pull/698">File methods on io.stdin, io.stdout and io.stderr</a></sub></td></tr>
-<tr><td><a href="https://github.com/Ukendio/jecs">jecs</a></td><td><sub><a href="https://github.com/Ukendio/jecs/pull/344">Set false values in bulk_insert on entities without components</a></sub></td></tr>
-<tr><td><a href="https://github.com/evaera/moonwave">moonwave</a></td><td><sub><a href="https://github.com/evaera/moonwave/pull/212">Render apiCategories headings so their links work</a></sub></td></tr>
 </table>
