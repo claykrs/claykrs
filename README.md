@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" alt="A pixel orange squid next to the name clay: Talk is cheap. Show me the code. (Linus Torvalds)" width="840">
+  <img src="assets/header-light.svg" alt="A pixel orange squid next to the name clay, and a quote: Soon you will have forgotten all things; soon all things will have forgotten you. (Marcus Aurelius)" width="840">
 </picture>
 
 <p align="center">
@@ -16,6 +16,11 @@
   <img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=claude&logoColor=white" />
   <img src="https://img.shields.io/badge/Z.ai-2D2D2D?style=flat-square&logo=zdotai&logoColor=white" />
 </p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/graph-dark.svg">
+  <img src="assets/graph-light.svg" alt="My contribution graph for the last year, with the pixel squid swimming across and eating it" width="100%">
+</picture>
 
 ### Projects
 
@@ -46,3 +51,10 @@
 </td>
 </tr>
 </table>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img src="assets/stats-light.svg" alt="GitHub stats: contributions, commits, pull requests, stars and top languages" width="100%">
+</picture>
